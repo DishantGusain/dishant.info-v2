@@ -28,7 +28,7 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
          >
             <ThemeProvider defaultTheme="dark">
-               <div className="fixed top-4 right-4 z-50">
+               <div className="fixed top-8 right-14 z-50">
                   <ThemeToggle />
                </div>
                {children}

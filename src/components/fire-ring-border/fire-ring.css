@@ -1,0 +1,62 @@
+.fire-circle {
+   position: relative;
+   width: 100px;
+   height: 100px;
+   filter: url(#fire-wavy) blur(0px);
+}
+
+.fire-circle:before {
+   content: "";
+   position: absolute;
+   top: 10px;
+   left: 5px;
+   right: 22px;
+   bottom: 22px;
+   border: 5px solid orange;
+   border-radius: 50%;
+   /* box-shadow: 0 0 50px orange,
+          inset 0 0 50px orange;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, orange);
+    animation: animate 5s linear infinite; */
+}
+.fire-circle:after {
+   content: "";
+   position: absolute;
+   top: 8px;
+   left: 4px;
+   right: 25px;
+   bottom: 25px;
+   border: 5px solid orange;
+   border-radius: 50%;
+   box-shadow: 0 0 50px orange, inset 0 0 50px orange;
+}
+.fire-circle:nth-child(2):before {
+   animation-delay: -2.5s;
+}
+@keyframes fire-animate {
+   0% {
+      box-shadow: 0 0 50px orange, inset 0 0 50px orange;
+      filter: hue-rotate(0deg);
+   }
+   20% {
+      box-shadow: 0 0 40px orange, inset 0 0 60px orange;
+   }
+   40% {
+      box-shadow: 0 0 40px orange, inset 0 0 80px orange;
+   }
+   60% {
+      box-shadow: 0 0 80px orange, inset 0 0 80px orange;
+   }
+   80% {
+      box-shadow: 0 0 100px orange, inset 0 0 100px orange;
+   }
+   100% {
+      box-shadow: 0 0 50px orange, inset 0 0 50px orange;
+      filter: hue-rotate(360deg);
+   }
+}
+
+svg {
+   width: 0;
+   height: 0;
+}
