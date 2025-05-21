@@ -2,6 +2,23 @@
 @import "tw-animate-css";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Add theme transition styles */
+:root {
+  transition: color-scheme 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+html, body {
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
 @theme inline {
    --color-background: var(--background);
    --color-foreground: var(--foreground);

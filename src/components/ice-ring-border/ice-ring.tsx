@@ -6,7 +6,7 @@ export const IceRing = ({ children }: { children: React.ReactNode }) => {
          <div className="text-center text-yellow-500 w-full h-full scale-115 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[49%] -z-10">
             {children}
          </div>
-         <svg>
+         <svg className="ice-ring-svg">
             <filter id="ice-wavy">
                <feTurbulence
                   x="0"
